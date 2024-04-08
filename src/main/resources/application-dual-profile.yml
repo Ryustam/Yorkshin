@@ -1,0 +1,39 @@
+database:
+  url: jdbc:mysql://localhost:3306/yorkshin?serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false
+  username: admin
+  password: joa3sd369
+
+server:
+  address: localhost
+  port: 8008
+
+spring:
+  config:
+    activate:
+      on-profile: dual-profile
+
+  datasource:
+    driver-class-name:
+    url: ${database.url}
+    username: ${database.username}
+    password: ${database.password}
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true # logging.level.org.hibernate: debug && jpa.properties.hibernate.show_sql: ture => logging detail sql
+    hibernate:
+      #데이터베이스에서 회원 정보를 저장할 테이블을 생성해야 하지만 ddl-auto 설정을 통해 스프링 부트 Entity 클래스 기반으로 테이블을 생성할 수 있다.
+      ddl-auto: none
+      #변수 그대로 매핑
+      naming  :
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  jwt:
+    secret: qwe123ewtqwtqewtwqetqwteqwgwqgweqgqgdasgdasgewfewvwvwevew
+
+logging:
+  level:
+    org:
+      hibernate: debug
+
+

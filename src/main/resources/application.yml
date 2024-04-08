@@ -1,17 +1,9 @@
-server:
-  port: 8080
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yorkshin
-    username: root
-    password: 8310
-  jpa:
-    hibernate:
-      #데이터베이스에서 회원 정보를 저장할 테이블을 생성해야 하지만 ddl-auto 설정을 통해 스프링 부트 Entity 클래스 기반으로 테이블을 생성할 수 있다.
-      ddl-auto: none
-      #변수 그대로 매핑
-      naming:
-        physical-strategy:  org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-  jwt:
-    secret: qwe123ewtqwtqewtwqetqwteqwgwqgweqgqgdasgdasgewfewvwvwevew
+  profiles:
+    default: home
+    group:
+      home:
+        - "home"
+      daul:
+        - "dual"
+

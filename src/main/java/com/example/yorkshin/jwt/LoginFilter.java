@@ -62,7 +62,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
 
         String role = auth.getAuthority();
         // 60*60*10L = 1시간
-        String token = jwtUtil.createJwt(username,role, 60*60*10L);
+        String token = jwtUtil.createJwt(username,role, 60*60*100L);
 
         /*
         * HTTP 인증 방식은 RFC 7235 정의에 따라 아래 인증 헤더 형태를 가져야한다.

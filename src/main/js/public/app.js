@@ -1,6 +1,6 @@
 $(document).ready(function (){
     $.ajax({
-        url: 'http://localhost:8080/admin',
+        url: 'http://localhost:8008/admin',
         type: 'GET',
         success: function(data) {
             console.log(data);
