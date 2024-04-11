@@ -2,8 +2,6 @@ spring:
   profiles:
     default: home
     group:
-      home:
-        - "home"
-      daul:
-        - "dual"
+      home: config,home-profile
+      dual: config,dual-profile
 

@@ -1,14 +1,19 @@
 package com.example.yorkshin.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @ResponseBody
@@ -30,4 +35,12 @@ public class MainController {
 
         return "Main Controller : " + username + role;
     }
+
+//    @PostMapping({"/master/api/v2/surveys/assigns"})
+//    @Operation(summary = "설문 템플릿 할당하기 (multi)")
+//    public ResponseEntity< Result< List<SurveyAssignedDTO> > > assignsNewSurveys ( @RequestBody List< Map<String, String> > req ) {
+//        return ResponseEntity.ok()
+//                             .body( RESPONSE.getSuccessResult( "SUCCESS",
+//                                                               SERVICE_survey.assignSurveyToCompanyMulti( req ) ) );
+//    }
 }

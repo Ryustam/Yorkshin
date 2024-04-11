@@ -1,24 +1,15 @@
-database:
-  url: jdbc:mysql://localhost:3306/yorkshin?serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false
-  username: admin
-  password: joa3sd369
-
-server:
-  address: localhost
-  port: 8008
-
 spring:
   config:
     activate:
       on-profile: dual-profile
 
   datasource:
-    driver-class-name:
-    url: ${database.url}
-    username: ${database.username}
-    password: ${database.password}
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: ${dual.database.url}
+    username: ${dual.database.username}
+    password: ${dual.database.password}
 
-  jpa:
+  jpa     :
     properties:
       hibernate:
         show_sql: true # logging.level.org.hibernate: debug && jpa.properties.hibernate.show_sql: ture => logging detail sql
@@ -29,7 +20,11 @@ spring:
       naming  :
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   jwt:
-    secret: qwe123ewtqwtqewtwqetqwteqwgwqgweqgqgdasgdasgewfewvwvwevew
+    secret: ${jwtKey}
+
+server:
+  address: 0.0.0.0
+  port: 8008
 
 logging:
   level:
