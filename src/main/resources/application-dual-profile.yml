@@ -5,6 +5,8 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      driver-class-name: org.mariadb.jdbc.Driver
     url: ${dual.database.url}
     username: ${dual.database.username}
     password: ${dual.database.password}
@@ -27,8 +29,13 @@ server:
   port: 8008
 
 logging:
+#  pattern:
+#    console: "%clr(%d{yy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(%-35.35logger{34}){cyan}\t%m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
   level:
     org:
       hibernate: debug
+    com:
+      example:
+        yorkshin: debug
 
 
