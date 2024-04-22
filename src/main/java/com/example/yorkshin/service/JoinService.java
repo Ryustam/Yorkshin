@@ -1,6 +1,6 @@
 package com.example.yorkshin.service;
 
-import com.example.yorkshin.dto.JoinDTO;
+import com.example.yorkshin.model.JoinDTO;
 import com.example.yorkshin.entity.UserEntity;
 import com.example.yorkshin.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

@@ -1,4 +1,4 @@
-package com.example.yorkshin.dto;
+package com.example.yorkshin.model;
 
 import lombok.Getter;
 import lombok.Setter;

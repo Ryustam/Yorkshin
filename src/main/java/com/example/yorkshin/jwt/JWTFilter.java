@@ -1,6 +1,6 @@
 package com.example.yorkshin.jwt;
 
-import com.example.yorkshin.dto.CustomUserDetails;
+import com.example.yorkshin.model.CustomUserDetails;
 import com.example.yorkshin.entity.UserEntity;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

@@ -1,6 +1,6 @@
 package com.example.yorkshin.service;
 
-import com.example.yorkshin.dto.CustomUserDetails;
+import com.example.yorkshin.model.CustomUserDetails;
 import com.example.yorkshin.entity.UserEntity;
 import com.example.yorkshin.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;

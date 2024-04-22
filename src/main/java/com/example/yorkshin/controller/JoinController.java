@@ -1,6 +1,6 @@
 package com.example.yorkshin.controller;
 
-import com.example.yorkshin.dto.JoinDTO;
+import com.example.yorkshin.model.JoinDTO;
 import com.example.yorkshin.service.JoinService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
