@@ -1,8 +1,7 @@
 package com.example.yorkshin.jwt;
 
-import com.example.yorkshin.dto.CustomUserDetails;
+import com.example.yorkshin.model.CustomUserDetails;
 import jakarta.servlet.FilterChain;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.AuthenticationManager;

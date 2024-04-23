@@ -1,4 +1,4 @@
-package com.example.yorkshin.dto;
+package com.example.yorkshin.model;
 
 import com.example.yorkshin.entity.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
